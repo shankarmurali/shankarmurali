@@ -6,14 +6,19 @@ These projects are the open-source side of that work: built on public sources, f
 
 ## 🛰️ What I'm building
 
-### [signal-desk](https://github.com/shankarmurali/signal-desk)
-A self-running daily intelligence brief for AI security, fraud, and trust & safety. GitHub Actions wakes up every morning, pulls a curated roster of researcher and practitioner feeds, and commits a sourced digest — the git history *is* the archive. Fork it and swap in your own roster.
+### [Signal Desk](https://shankarmurali.github.io/signal-desk-v2/) — read today's issue
+A daily AI security & fraud newsletter that publishes itself. Every morning, GitHub Actions gathers from keyless public sources — researcher feeds, Hacker News, arXiv, and my incident tracker below — ranks stories with a transparent signal-strength score, and ships a new issue to a versioned web archive with an [RSS feed](https://shankarmurali.github.io/signal-desk-v2/feed.xml). No servers, no API keys, no cost. [Code here](https://github.com/shankarmurali/signal-desk-v2) (successor to [signal-desk v1](https://github.com/shankarmurali/signal-desk)); PRs that add sources are welcome.
+
+### [deep-research-kit](https://github.com/shankarmurali/deep-research-kit)
+A model-agnostic deep research agent with a keyless corpus engine. It gathers evidence from six free public APIs (OpenAlex, arXiv, GDELT news, and more), then runs a full research loop — decompose into sub-questions, read primary sources, synthesize a cited report — against **any** AI: local Ollama by default, any OpenAI-compatible endpoint by env var, or Claude Code via a bundled skill. Every report ends with an automated citation audit that flags anything the model cited but never actually read. `python3 start.py` is the whole onboarding.
 
 ### [ai-agent-incidents](https://shankarmurali.github.io/ai-agent-incidents/)
 A structured, community-maintained database of real-world AI agent failures — destructive actions, prompt-injection exploits, agentic supply-chain compromises. Each entry records what access the agent had, what technically failed, and how far it spread, with sources. Defenders need the pattern, not the anecdote. PRs welcome; no exploit code, ever.
 
 ### [awesome-ai-trust-and-safety](https://github.com/shankarmurali/awesome-ai-trust-and-safety)
 Curated resources for practitioners: frameworks, red-team tools, abuse data feeds, foundational research, and the communities where this field lives.
+
+*These four compose: the incident tracker feeds the newsletter, the newsletter's archive feeds the research agent, and the awesome list maps the territory.*
 
 ## 🔭 What I'm thinking about
 
